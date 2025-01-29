@@ -80,12 +80,16 @@ public class LongestCommonSequence {
                 result.addAll(printLCS(a, b, i, j-1, memo, dp));
             }
         }
-
+        for (String s: result){
+            System.out.println("Temporary:");
+            System.out.println(s);
+        }
         memo.put(key, (TreeSet<String>) result);
         return result;
     }
 
     public static void main(String[] args) {
         LCS("abcde", "ace");
+
     }
 }
